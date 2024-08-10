@@ -1,0 +1,91 @@
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.status {
+    opacity: 0.5;
+    margin: 0;
+}
+
+blockquote {
+    margin: 15px 0 0;
+}
+
+blockquote p:first-child {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+blockquote p:last-child {
+    opacity: 0.7;
+}
+
+.violet {
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+
+.dark-gray {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.dark-blue {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .violet {
+        grid-column: span 2;
+    }
+
+    .dark-blue {
+        grid-column: span 2;
+    }
+
+    .white:last-child {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+}
